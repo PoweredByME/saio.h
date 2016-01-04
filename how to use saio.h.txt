@@ -1,0 +1,61 @@
+              <saio.h> Documentation  
+              
+    Introduction:-              
+    It is a header file that deals with the matrix manipulation. It is a library of C programming language. 
+    It deals with matrix input/output, addition, subtraction, multiplication, determinant, inverse, ad-joint and transpose.  
+
+    Note: The library only supports arrays of type (array[][100]).
+    
+    m_in( matrix[][100],int row, int column)          
+    The function inputs the matrix in the matrix array. It takes the numbers of rows and columns, too.  
+    
+    m_out(matrix[][100],int row, int column)      
+    This function prints the matrix of the console screen. It uses the number of rows and columns as a reference. 
+     
+     m_determinant(matrix[][100],int order)         
+     This function input any square matrix of between the order of 1X1 to 100X100. 
+     It only inputs a square matrix and otherwise it will give an error. The order inputs the order of the square matrix. 
+      
+      m_transpose(answerMatrix[][100],matrix[][100],int row, int column)    
+      This function  inputs a matrix and takes its transpose.
+      Then, it stores  its answer to the answerMatrix , so that it can be accessed in main. 
+     
+       m_adjoint(answerMatrix[][100],matrix[][100],int row, int column)       
+       This function inputs a matrix and takes its adjoint. Then, it stores its answer 
+       in the answer Matrix, so that it can be accessed in main.       
+   
+EXAMPLE:- 
+#include<saio.h> 
+int main()
+{  float m[100][100];  float a[100][100];  int column = promptcolumn(); 
+int row = promptrow();  m_in(m, row, column);  printf("\nThe given matrix =\n");
+m_out(m, row, column);      
+printf("\nThe determinant = %f", m_determinant(m, row));
+m_adjoint(a, m, row, column);
+printf("The adjoint of the matrix =\n");  
+m_out(a, row, column);  _getch(); }
+
+m_inverse(answerMatrix[][100],matrix[][100],int row, int column)       
+This function input a matrix and takes its inverse and then it stores
+it in the answerMatrix. That can be used in the main function. 
+
+m_product(answerMatrix[][100],matrix1[][100],int row1, int column1, matrix2[][100], int row2, int column2)  
+This function inputs two input matrices with their orders and stores the multiplication answer in answerMatrix,
+that can be used in the main. 
+
+m_add(answerMatrix[][100],matrix1[][100],int row1, int column1, matrix2[][100],int row2,int column2)       
+This function inputs two matrices with their respective orders and stores
+the addition answer in answerMatrix and that can be used in the main. 
+
+m_subtract(answeMatrix[][100],matrix1[][100],int row1, int column1, matrix2[][100], int row2, int column2)        
+This function inputs two matrices with their respective orders and stores the subtraction answer
+in answerMatrix and that can be used in the main. 
+
+
+mc_product(answerMatrix[][100], int constant, matrix[][100], int rows, int column)
+This function inputs a constant and a matrix with its order, multiply the 
+constant with the matrix and stores the solution in the answerMatrix
+that can be used in main function. 
+ 
+ m_identity(int answerMatrix[][100],int order)       
+ This function generates an identity matrix and stores it in the answerMatrix
