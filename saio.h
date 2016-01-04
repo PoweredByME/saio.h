@@ -1,13 +1,10 @@
-// This code is Powered By M.E.
+// This code is written by Saad Ahmad, De'Burgers (PoweredByME)//
 
-// The code is written by Saad Ahmad.
-
+#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
 #include<conio.h>
-#include<ctype.h>
-#include<string.h>
 /*
 float m_in(float array1[][100],int row1,int column1)
 void m_out(const float array2[][100],int row2, int column2)
@@ -34,7 +31,8 @@ float m_in(float array1[][100], int row1, int column1)                          
 int m_in(int array1[][100], int row1, int column1)                            //function for the matrix input
 {
 	int counter, counter1;             //defining variables
-	printf("\n");                                          //print	for (counter = 0; counter<row1; counter++) {                        //For loop to select the row input
+	printf("\n");                                          //print
+	for (counter = 0; counter<row1; counter++) {                        //For loop to select the row input
 		for (counter1 = 0; counter1<column1; counter1++) {                //for loop to select the column input 
 			printf("Enter the element, a[%d][%d] = ", counter + 1, counter1 + 1);                    //prompt 
 			scanf_s("%d", &array1[counter][counter1]);                                         //input for matrix
@@ -784,7 +782,7 @@ int m_product(int answerofproduct[][100], int array8[][100], int row8, int colum
 }
 double m_product(double answerofproduct[][100], double array8[][100], int row8, int column8, double array9[][100], int row9, int column9)
 {
-	int counter, counter1, counter2, counter3, counter4, counter5;
+	int counter, counter1, counter2;
 	if (column8 != row9) {
 		printf("\nError...The product of matrix A (%dX%d) and matrix B (%dX%d) does not exist.\n", row8, column8, row9, column9);
 	}
